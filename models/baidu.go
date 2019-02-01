@@ -2,6 +2,11 @@ package models
 
 import "github.com/globalsign/mgo/bson"
 
+type TokenInfo struct {
+	AccessToken string `bson:"access_token" json:"accessToken"`
+	ExpiresIn   int64  `bson:"expires_in" json:"expiresIn"`
+}
+
 type BaiduAccessToken struct {
 	Id           bson.ObjectId `bson:"id"`
 	UserId       string        `bson:"user_id" json:"userId"`
